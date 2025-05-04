@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { ImagePlus, Loader2, X } from "lucide-react";
+import { toast } from "sonner";
 import type { Post, User } from "@/lib/types";
 
 interface CreatePostModalProps {
@@ -47,7 +48,10 @@ export default function CreatePostModal({
   };
 
   const handleSubmit = () => {
-    if (!selectedImage || !caption.trim()) return;
+    if (!selectedImage || !caption.trim()) {
+      toast.error("Please add both an image and caption");
+      return;
+    }
 
     setIsLoading(true);
 

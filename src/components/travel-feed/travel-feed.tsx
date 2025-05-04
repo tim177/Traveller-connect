@@ -4,9 +4,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlusCircle } from "lucide-react";
+import { toast } from "sonner";
 import CreatePostModal from "./create-post-modal";
 import PostCard from "./post-card";
+import CoinBalance from "@/components/coin-system/coin-balance";
+import TransactionHistory from "@/components/coin-system/transaction-history";
+import CoinShop from "@/components/coin-system/coin-shop";
 import type { Post, User } from "@/lib/types";
+import { awardCoins } from "@/lib/coin-service";
 import {
   addComment,
   createPost,
@@ -21,6 +26,8 @@ interface TravelFeedProps {
 export default function TravelFeed({ currentUser }: TravelFeedProps) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  const [isShopOpen, setIsShopOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -36,6 +43,8 @@ export default function TravelFeed({ currentUser }: TravelFeedProps) {
     setIsCreateModalOpen(false);
 
     // Award coins for posting
+    awardCoins(currentUser.id, 100, "Posted a travel update");
+    toast.success("Post created successfully!");
   };
 
   const handleLikePost = (postId: string) => {
@@ -55,11 +64,19 @@ export default function TravelFeed({ currentUser }: TravelFeedProps) {
     });
 
     setPosts(updatedPosts);
+    toast.success("Comment added!");
   };
 
   return (
     <>
       <div className="mb-6">
+        <CoinBalance
+          userId={currentUser.id}
+          className="mb-6"
+          onViewHistory={() => setIsHistoryOpen(true)}
+          onOpenShop={() => setIsShopOpen(true)}
+        />
+
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-teal-800">Travel Feed</h2>
           <Button
@@ -123,6 +140,18 @@ export default function TravelFeed({ currentUser }: TravelFeedProps) {
         onClose={() => setIsCreateModalOpen(false)}
         onCreatePost={handleCreatePost}
         currentUser={currentUser}
+      />
+
+      <TransactionHistory
+        userId={currentUser.id}
+        isOpen={isHistoryOpen}
+        onClose={() => setIsHistoryOpen(false)}
+      />
+
+      <CoinShop
+        userId={currentUser.id}
+        isOpen={isShopOpen}
+        onClose={() => setIsShopOpen(false)}
       />
     </>
   );
