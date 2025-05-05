@@ -1,4 +1,5 @@
 "use client";
+import BlogsView from "@/components/blogs/blogs-view";
 import DashboardSidebar from "@/components/dashboard/dashboard-sidebar";
 import MobileNav from "@/components/dashboard/mobile-nav";
 import EscalationSystem from "@/components/escalation/escalation-system";
@@ -82,6 +83,15 @@ export default function DashboardPage() {
             )}
           >
             {activeTab === "itinerary" && <ItineraryView currentUser={user} />}
+          </div>
+
+          <div
+            className={cn(
+              "container mx-auto max-w-md px-4 py-6",
+              activeTab !== "blogs" && "hidden"
+            )}
+          >
+            {activeTab === "blogs" && <BlogsView />}
           </div>
         </main>
       </div>

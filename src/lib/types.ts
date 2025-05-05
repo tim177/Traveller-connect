@@ -100,3 +100,23 @@ export interface Itinerary {
   driverInfo: DriverInfo;
   days: ItineraryDay[];
 }
+
+export interface BlogAuthor {
+  id: string;
+  name: string;
+  avatar: string;
+}
+
+export interface Blog {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: BlogAuthor;
+  coverImage: string;
+  category: string;
+  tags: string[];
+  publishedAt: string;
+  readTime: number;
+  likes: number;
+}
