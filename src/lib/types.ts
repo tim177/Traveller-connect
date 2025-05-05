@@ -31,3 +31,23 @@ export interface CoinTransaction {
   timestamp: string;
   relatedPostId?: string; //refrence for the post
 }
+
+export interface EscalationComment {
+  text: string;
+  isFromAgency: boolean;
+  createdAt: string;
+}
+
+export interface Escalation {
+  id: string;
+  userId: string;
+  userName: string;
+  title: string;
+  category: string;
+  description: string;
+  imageUrl?: string;
+  status: "pending" | "in_progress" | "resolved";
+  comments: EscalationComment[];
+  createdAt: string;
+  updatedAt: string;
+}
