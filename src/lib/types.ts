@@ -51,3 +51,52 @@ export interface Escalation {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface Actvity {
+  time: string;
+  title: string;
+  description: string;
+  type: "meal" | "sightseeing" | "leisure" | "transport";
+  location?: string;
+}
+
+export interface ItineraryDay {
+  id: string;
+  title: string;
+  date: string;
+  description: string;
+  activities: Actvity[];
+}
+
+export interface Hotel {
+  name: string;
+  location: string;
+  checkIn: string;
+  checkOut: string;
+  roomType: string;
+  amenities: string[];
+}
+
+export interface DriverInfo {
+  name: string;
+  photoUrl: string;
+  phoneNumber: string;
+  carModel: string;
+  carNumber: string;
+  languages: string[];
+  rating: number;
+}
+
+export interface Itinerary {
+  id: string;
+  userId: string;
+  title: string;
+  destination: string;
+  startDate: string;
+  endDate: string;
+  hotel: Hotel;
+  inclusions: string[];
+  exclusions: string[];
+  driverInfo: DriverInfo;
+  days: ItineraryDay[];
+}

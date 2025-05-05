@@ -2,6 +2,7 @@
 import DashboardSidebar from "@/components/dashboard/dashboard-sidebar";
 import MobileNav from "@/components/dashboard/mobile-nav";
 import EscalationSystem from "@/components/escalation/escalation-system";
+import ItineraryView from "@/components/itinerary/itinerary-view";
 import TravelFeed from "@/components/travel-feed/travel-feed";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
@@ -72,6 +73,15 @@ export default function DashboardPage() {
             {activeTab === "escalations" && (
               <EscalationSystem currentUser={user} />
             )}
+          </div>
+
+          <div
+            className={cn(
+              "container mx-auto max-w-md px-4 py-6",
+              activeTab !== "itinerary" && "hidden"
+            )}
+          >
+            {activeTab === "itinerary" && <ItineraryView currentUser={user} />}
           </div>
         </main>
       </div>
