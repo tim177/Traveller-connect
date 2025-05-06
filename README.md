@@ -2,37 +2,37 @@
 
 **Traveller Connect** is a modern travel companion app built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It helps users share their travel experiences, manage itineraries, read inspiring travel blogs, and raise support tickets – all in one place.
 
-<h2 class="text-center text-xl font-semibold mt-6">Traveller Connect Screenshots 🖼️</h2>
+<h2 class="text-center text-xl font-semibold mt-6">Traveller Connect Screenshots</h2>
 
 <div class="grid grid-cols-2 gap-6 mt-6 mx-auto max-w-4xl">
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">HomePage</h3>
-    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" class="rounded-lg shadow-md" />
+    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" class="rounded-lg shadow-md w-full" />
   </div>
   
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">Travel Feed</h3>
-    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" class="rounded-lg shadow-md" />
+    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" class="rounded-lg shadow-md w-full" />
   </div>
   
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">Blog Detail</h3>
-    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" class="rounded-lg shadow-md" />
+    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" class="rounded-lg shadow-md w-full" />
   </div>
   
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">Issue Page</h3>
-    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" class="rounded-lg shadow-md" />
+    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" class="rounded-lg shadow-md w-full" />
   </div>
   
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">Issue Form</h3>
-    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" class="rounded-lg shadow-md" />
+    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" class="rounded-lg shadow-md w-full" />
   </div>
   
-  <div class="text-center">
+  <div class="text-center" style="width: 230px;">
     <h3 class="text-lg font-medium">Plan Page</h3>
-    <img src="./public/plan.png" alt="Traveller Connect PlanPage" class="rounded-lg shadow-md" />
+    <img src="./public/plan.png" alt="Traveller Connect PlanPage" class="rounded-lg shadow-md w-full" />
   </div>
 </div>
 
