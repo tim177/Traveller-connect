@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Traveller Connect
 
-## Getting Started
+**Traveller Connect** is a modern travel companion app built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It helps users share their travel experiences, manage itineraries, read inspiring travel blogs, and raise support tickets – all in one place.
 
-First, run the development server:
+![Traveller Connect Screenshot](https://placeholder.svg?height=400&width=800)
 
-```bash
+---
+
+## ✨ Features
+
+- 📸 **Travel Feed** – Share photos, stories, and updates from your adventures
+- 📝 **Travel Blogs** – Explore and read detailed travel blogs and destination guides
+- 🧳 **Itinerary Manager** – Plan and organize trip details day-by-day
+- 🛠️ **Support System** – Raise and track support issues while traveling
+- 🪙 **Virtual Coin Rewards** – Earn and spend in-app virtual coins
+
+---
+
+## ⚙️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS v4
+- **State Management**: Zustand
+- **Authentication**: Lightweight custom localStorage auth (for demo)
+- **Notifications**: Sonner for toast messages
+- **Markdown Rendering**: ReactMarkdown
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+\`\`\`bash
+git clone https://github.com/yourusername/traveller-connect.git
+cd traveller-connect
+\`\`\`
+
+### 2. Install Dependencies
+
+\`\`\`bash
+npm install
+
+# or
+
+yarn install
+
+# or
+
+pnpm install
+
+# or
+
+bun install
+\`\`\`
+
+### 3. Run the Development Server
+
+\`\`\`bash
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
+
 # or
+
 bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit **[http://localhost:3000](http://localhost:3000)** to view the app in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Demo Credentials
 
-## Learn More
+Use the following credentials to explore the app:
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`
+Email: demo@example.com  
+Password: password
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Or sign up with any email/password combination.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠 Project Instructions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🔧 **Authentication** is mocked with localStorage for demo purposes.
+- ✍️ **Blog content** supports Markdown formatting.
+- 🧩 **Virtual Coin Logic** is stored client-side.
+- 🧾 **Support Tickets** and **Itinerary Data** are stored locally.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Deployment
+
+Deploy effortlessly using [**Vercel**](https://vercel.com):
+
+\`\`\`bash
+
+# Push to GitHub and import into Vercel
+
+\`\`\`
+
+Or refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more options.
+
+---
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Interactive Next.js Tutorial](https://nextjs.org/learn)
+- [Next.js GitHub Repo](https://github.com/vercel/next.js)
+
+---
+
+## 🪪 License
+
+MIT

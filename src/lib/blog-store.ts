@@ -82,7 +82,7 @@ function generateSampleBlogs(): Blog[] {
         avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Michael",
       },
       coverImage:
-        "https://images.unsplash.com/photo-1581553680321-4fffae59fcfa",
+        "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1",
       category: "travel tips",
       tags: ["packing", "minimalist travel", "carry-on", "travel hacks"],
       publishedAt: new Date(
