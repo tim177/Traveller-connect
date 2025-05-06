@@ -120,3 +120,61 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Blog content styles */
+.blog-content {
+  @apply w-full max-w-full break-words;
+}
+
+.blog-content h1 {
+  @apply text-2xl font-bold mt-6 mb-4 text-teal-900 dark:text-teal-200;
+}
+
+.blog-content h2 {
+  @apply text-xl font-bold mt-5 mb-3 text-teal-800 dark:text-teal-300;
+}
+
+.blog-content h3 {
+  @apply text-lg font-bold mt-4 mb-2 text-teal-700 dark:text-teal-400;
+}
+
+.blog-content p {
+  @apply mb-4 text-gray-700 dark:text-gray-300;
+}
+
+.blog-content ul {
+  @apply list-disc pl-5 mb-4 text-gray-700 dark:text-gray-300;
+}
+
+.blog-content ol {
+  @apply list-decimal pl-5 mb-4 text-gray-700 dark:text-gray-300;
+}
+
+.blog-content li {
+  @apply mb-1;
+}
+
+.blog-content a {
+  @apply text-teal-600 dark:text-teal-400 hover:underline;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-teal-300 dark:border-teal-700 pl-4 italic text-gray-600 dark:text-gray-400 my-4;
+}
+
+.blog-content code {
+  @apply bg-gray-100 dark:bg-gray-700 rounded px-1 py-0.5 text-sm font-mono;
+}
+
+.blog-content pre {
+  @apply bg-gray-100 dark:bg-gray-700 rounded p-4 text-sm font-mono mb-4 whitespace-pre-wrap overflow-x-auto;
+}
+
+.blog-content img {
+  @apply rounded-md max-w-full h-auto my-4;
+}
+
+/* Ensure dark mode works properly */
+.dark {
+  color-scheme: dark;
+}

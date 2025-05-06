@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { Blog } from "./types";
-
+import dedent from "ts-dedent";
 interface BlogState {
   blogs: Blog[];
   selectedBlog: Blog | null;
@@ -11,7 +11,6 @@ interface BlogState {
   setSearchQuery: (query: string) => void;
 }
 
-// Helper function to generate sample blogs
 function generateSampleBlogs(): Blog[] {
   return [
     {
@@ -19,7 +18,7 @@ function generateSampleBlogs(): Blog[] {
       title: "10 Hidden Gems in Bali You Must Visit",
       excerpt:
         "Discover the secret spots in Bali that most tourists never see...",
-      content: `
+      content: dedent(`
         # 10 Hidden Gems in Bali You Must Visit
 
         Bali is known for its popular beaches and temples, but there's so much more to discover on this beautiful island. Here are ten hidden gems that will make your Bali trip truly special.
@@ -35,7 +34,15 @@ function generateSampleBlogs(): Blog[] {
         ## 3. Nyang Nyang Beach
 
         A secluded beach that requires a bit of effort to reach - about 500 steps down a cliff - but rewards you with pristine white sands and almost no crowds.
-      `,
+
+        ## 4. Sidemen Valley
+
+        Experience the real Bali in this lush valley with rice terraces, without the crowds of Ubud or Tegallalang.
+
+        ## 5. Banyu Wana Amertha Waterfall
+
+        A newly discovered waterfall complex with four beautiful cascades and natural pools.
+      `).trim(),
       author: {
         id: "author-1",
         name: "Sarah Johnson",
@@ -45,7 +52,7 @@ function generateSampleBlogs(): Blog[] {
         "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
       category: "destinations",
       tags: ["bali", "indonesia", "hidden gems", "travel tips"],
-      publishedAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(), // 7 days ago
+      publishedAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
       readTime: 5,
       likes: 124,
     },
@@ -53,7 +60,7 @@ function generateSampleBlogs(): Blog[] {
       id: "blog-2",
       title: "How to Pack for a Month-Long Trip in Just a Carry-On",
       excerpt: "Master the art of minimalist packing with these expert tips...",
-      content: `
+      content: dedent(`
         # How to Pack for a Month-Long Trip in Just a Carry-On
 
         Traveling light doesn't mean sacrificing comfort or style. With these strategic packing tips, you can fit everything you need for a month-long adventure in just a carry-on bag.
@@ -66,9 +73,9 @@ function generateSampleBlogs(): Blog[] {
 
         * Choose a color scheme so all items can mix and match
         * Select fabrics that resist wrinkles and dry quickly
-        * Plan to do laundry every 7-10 days
+        * Plan to do laundry every 7–10 days
         * Pack for a week, not a month
-      `,
+      `),
       author: {
         id: "author-2",
         name: "Michael Chen",
@@ -80,16 +87,16 @@ function generateSampleBlogs(): Blog[] {
       tags: ["packing", "minimalist travel", "carry-on", "travel hacks"],
       publishedAt: new Date(
         Date.now() - 14 * 24 * 60 * 60 * 1000
-      ).toISOString(), // 14 days ago
+      ).toISOString(),
       readTime: 7,
-      likes: 124,
+      likes: 2,
     },
     {
       id: "blog-3",
       title: "A Food Lover's Guide to Tokyo",
       excerpt:
         "Explore Tokyo's incredible culinary scene from street food to Michelin stars...",
-      content: `
+      content: dedent(`
         # A Food Lover's Guide to Tokyo
 
         Tokyo is a paradise for food enthusiasts, offering everything from humble street food to the highest concentration of Michelin-starred restaurants in the world. Here's how to navigate this incredible culinary landscape.
@@ -101,7 +108,7 @@ function generateSampleBlogs(): Blog[] {
         * Tamagoyaki (sweet rolled omelette)
         * Fresh sushi breakfast
         * Matcha treats
-      `,
+      `),
       author: {
         id: "author-3",
         name: "Emma Tanaka",
@@ -113,9 +120,9 @@ function generateSampleBlogs(): Blog[] {
       tags: ["tokyo", "japan", "food", "culinary travel", "restaurants"],
       publishedAt: new Date(
         Date.now() - 21 * 24 * 60 * 60 * 1000
-      ).toISOString(), // 21 days ago
+      ).toISOString(),
       readTime: 8,
-      likes: 124,
+      likes: 87,
     },
   ];
 }

@@ -10,6 +10,8 @@ import { ArrowLeft, Heart, BookmarkPlus, Share2, Clock } from "lucide-react";
 import { useBlogStore } from "@/lib/blog-store";
 import ReactMarkdown from "react-markdown";
 import { toast } from "sonner";
+import remarkGfm from "remark-gfm";
+import dedent from "ts-dedent";
 
 export default function BlogDetail() {
   const { selectedBlog, selectBlog } = useBlogStore();
@@ -17,6 +19,7 @@ export default function BlogDetail() {
   const [isSaved, setIsSaved] = useState(false);
 
   if (!selectedBlog) return null;
+  const trimmedSelected = dedent(selectedBlog.content);
 
   const handleLike = () => {
     setIsLiked(!isLiked);
@@ -106,77 +109,10 @@ export default function BlogDetail() {
       </div>
 
       {/* Blog Content */}
-      <Card className="border-teal-200 dark:border-teal-800 bg-white/90 dark:bg-gray-800/90 p-6 overflow-hidden">
-        <div className="prose prose-teal dark:prose-invert max-w-none prose-headings:text-teal-900 dark:prose-headings:text-teal-200 prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-img:rounded-md">
-          <ReactMarkdown
-            components={{
-              // Override to ensure proper styling and prevent overflow
-              p: ({ children }) => (
-                <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  {children}
-                </p>
-              ),
-              h1: ({ children }) => (
-                <h1 className="text-2xl font-bold mt-6 mb-4 text-teal-900 dark:text-teal-200">
-                  {children}
-                </h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="text-xl font-bold mt-5 mb-3 text-teal-800 dark:text-teal-300">
-                  {children}
-                </h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-lg font-bold mt-4 mb-2 text-teal-700 dark:text-teal-400">
-                  {children}
-                </h3>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc pl-5 mb-4 text-gray-700 dark:text-gray-300">
-                  {children}
-                </ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="list-decimal pl-5 mb-4 text-gray-700 dark:text-gray-300">
-                  {children}
-                </ol>
-              ),
-              li: ({ children }) => <li className="mb-1">{children}</li>,
-              a: ({ href, children }) => (
-                <a
-                  href={href}
-                  className="text-teal-600 dark:text-teal-400 hover:underline"
-                >
-                  {children}
-                </a>
-              ),
-              blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-teal-300 dark:border-teal-700 pl-4 italic text-gray-600 dark:text-gray-400">
-                  {children}
-                </blockquote>
-              ),
-              code: ({ children }) => (
-                <code className="bg-gray-100 dark:bg-gray-700 rounded px-1 py-0.5 text-sm font-mono">
-                  {children}
-                </code>
-              ),
-              pre: ({ children }) => (
-                <pre className="bg-gray-100 dark:bg-gray-700 rounded p-4 overflow-x-auto text-sm font-mono mb-4">
-                  {children}
-                </pre>
-              ),
-              img: ({ src, alt }) => (
-                <div className="my-4">
-                  <img
-                    src={src || "/placeholder.svg"}
-                    alt={alt}
-                    className="rounded-md max-w-full h-auto"
-                  />
-                </div>
-              ),
-            }}
-          >
-            {selectedBlog.content}
+      <Card className="border-teal-200 dark:border-teal-800 bg-white/90 dark:bg-gray-800/90 p-4 sm:p-6 overflow-hidden">
+        <div className="blog-content">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {trimmedSelected}
           </ReactMarkdown>
         </div>
       </Card>

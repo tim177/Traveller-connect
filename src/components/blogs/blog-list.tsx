@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Clock } from "lucide-react";
 import { useBlogStore } from "@/lib/blog-store";
 import { formatDistanceToNow } from "date-fns";
+import type { Blog } from "@/lib/types";
 
 export default function BlogList() {
   const {
@@ -98,8 +99,12 @@ export default function BlogList() {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function BlogCard({ blog, onSelect }: any) {
+interface BlogCardProps {
+  blog: Blog;
+  onSelect: () => void;
+}
+
+function BlogCard({ blog, onSelect }: BlogCardProps) {
   return (
     <Card
       className="overflow-hidden border-teal-200 dark:border-teal-800 bg-white/90 dark:bg-gray-800/90 transition-all hover:shadow-md cursor-pointer"
