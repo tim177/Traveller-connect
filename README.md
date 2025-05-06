@@ -5,29 +5,29 @@
 <h2 align="center">Traveller Connect Screenshots 🖼️</h2>
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; justify-items: center;">
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>HomePage</h3>
-    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" style="width: 200px;" />
+    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" style="" />
   </div>
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>Travel Feed</h3>
-    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" style="width: 200px;" />
+    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" style="" />
   </div>
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>Blog Detail</h3>
-    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" style="width: 200px;" />
+    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" style="" />
   </div>
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>Issue Page</h3>
-    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" style="width: 200px;" />
+    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" style="" />
   </div>
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>Issue Form</h3>
-    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" style="width: 200px;" />
+    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" style="" />
   </div>
-  <div style="width: 200px; text-align: center;">
+  <div style=" text-align: center;">
     <h3>Plan Page</h3>
-    <img src="./public/plan.png" alt="Traveller Connect PlanPage" style="width: 200px;" />
+    <img src="./public/plan.png" alt="Traveller Connect PlanPage" style="" />
   </div>
 </div>
 
