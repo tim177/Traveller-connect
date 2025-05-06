@@ -2,13 +2,33 @@
 
 **Traveller Connect** is a modern travel companion app built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It helps users share their travel experiences, manage itineraries, read inspiring travel blogs, and raise support tickets – all in one place.
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; justify-items: center;">
-  <img src="./public/Welcom.png" alt="Traveller Connect HomePage" width="230" />
-  <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" width="230" />
-  <img src="./public/blog-detail.png" alt="Traveller Connect Blog" width="230" />
-  <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" width="230" />
-  <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" width="230" />
-  <img src="./public/plan.png" alt="Traveller Connect PlanPage" width="230" />
+<h2 class="text-center text-xl font-semibold mt-6">Traveller Connect Screenshots 🖼️</h2>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; justify-items: center; margin-top: 16px;">
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">HomePage</h3>
+    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" width="230" class="rounded-lg shadow-md"/>
+  </div>
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">Travel Feed</h3>
+    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" width="230" class="rounded-lg shadow-md"/>
+  </div>
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">Blog Detail</h3>
+    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" width="230" class="rounded-lg shadow-md"/>
+  </div>
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">Issue Page</h3>
+    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" width="230" class="rounded-lg shadow-md"/>
+  </div>
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">Issue Form</h3>
+    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" width="230" class="rounded-lg shadow-md"/>
+  </div>
+  <div class="image-card">
+    <h3 class="text-center text-lg font-medium">Plan Page</h3>
+    <img src="./public/plan.png" alt="Traveller Connect PlanPage" width="230" class="rounded-lg shadow-md"/>
+  </div>
 </div>
 
 ---
