@@ -2,13 +2,13 @@
 
 **Traveller Connect** is a modern travel companion app built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It helps users share their travel experiences, manage itineraries, read inspiring travel blogs, and raise support tickets – all in one place.
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; justify-items: center;">
-  ![Traveller Connect HomePage](./public/Welcom.png)
-  ![Traveller Connect FeedPage](./public/travel-feed.png)
-  ![Traveller Connect Blog](./public/blog-detail.png)
-  ![Traveller Connect IssuePage](./public/issue-detail.png)
-  ![Traveller Connect IssueForm](./public/issue-form.png)
-  ![Traveller Connect PlanPage](./public/plan.png)
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; justify-items: center;">
+  <img src="./public/Welcom.png" alt="Traveller Connect HomePage" width="300" />
+  <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" width="300" />
+  <img src="./public/blog-detail.png" alt="Traveller Connect Blog" width="300" />
+  <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" width="300" />
+  <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" width="300" />
+  <img src="./public/plan.png" alt="Traveller Connect PlanPage" width="300" />
 </div>
 
 ---
