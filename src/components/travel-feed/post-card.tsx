@@ -57,7 +57,7 @@ export default function PostCard({
   };
 
   return (
-    <Card className="overflow-hidden border-teal-200 bg-white shadow-sm hover:shadow-md transition-shadow">
+    <Card className="overflow-hidden border-teal-200 gap-0 py-0 bg-white shadow-sm hover:shadow-md transition-shadow">
       <CardHeader className="flex flex-row items-center gap-3 p-4">
         <Avatar className="h-10 w-10 border border-teal-200">
           <AvatarImage

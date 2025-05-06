@@ -107,7 +107,7 @@ interface BlogCardProps {
 function BlogCard({ blog, onSelect }: BlogCardProps) {
   return (
     <Card
-      className="overflow-hidden border-teal-200 dark:border-teal-800 bg-white/90 dark:bg-gray-800/90 transition-all hover:shadow-md cursor-pointer"
+      className="overflow-hidden py-0 border-teal-200 dark:border-teal-800 bg-white/90 dark:bg-gray-800/90 transition-all hover:shadow-md cursor-pointer"
       onClick={onSelect}
     >
       <div className="flex flex-col sm:flex-row">

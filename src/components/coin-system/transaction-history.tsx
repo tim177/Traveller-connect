@@ -10,8 +10,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowUp, Coins, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Coins } from "lucide-react";
 import { getUserCoins } from "@/lib/coin-service";
 import { cn } from "@/lib/utils";
 import type { CoinTransaction } from "@/lib/types";
@@ -86,16 +85,6 @@ export default function TransactionHistory({
             </div>
           )}
         </ScrollArea>
-
-        <Button
-          className="absolute right-4 top-4"
-          variant="ghost"
-          size="icon"
-          onClick={onClose}
-        >
-          <X className="h-4 w-4" />
-          <span className="sr-only">Close</span>
-        </Button>
       </SheetContent>
     </Sheet>
   );

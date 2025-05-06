@@ -19,7 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Coins, Gift, Award, Camera, MapPin, Sparkles, X } from "lucide-react";
+import { Coins, Gift, Award, Camera, MapPin, Sparkles } from "lucide-react";
 import { getUserCoins, purchaseWithCoins } from "@/lib/coin-service";
 import { useState, useEffect } from "react";
 
@@ -140,16 +140,6 @@ export default function CoinShop({ userId, isOpen, onClose }: CoinShopProps) {
             ))}
           </div>
         </ScrollArea>
-
-        <Button
-          className="absolute right-4 top-4"
-          variant="ghost"
-          size="icon"
-          onClick={onClose}
-        >
-          <X className="h-4 w-4" />
-          <span className="sr-only">Close</span>
-        </Button>
       </SheetContent>
     </Sheet>
   );
@@ -164,7 +154,7 @@ interface ShopItemCardProps {
 function ShopItemCard({ item, onPurchase, canAfford }: ShopItemCardProps) {
   return (
     <Card className="overflow-hidden border-teal-200 bg-white py-0">
-      <CardHeader className="p-4 pb-0">
+      <CardHeader className="px-4 pt-4 pb-0 border-b">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100">
@@ -192,10 +182,10 @@ function ShopItemCard({ item, onPurchase, canAfford }: ShopItemCardProps) {
           </Badge>
         </div>
       </CardHeader>
-      <CardContent className="p-4 pt-3">
+      <CardContent className="p-4 py-0">
         <p className="text-sm text-muted-foreground">{item.description}</p>
       </CardContent>
-      <CardFooter className="flex justify-end border-t px-4 pb-2 pt-1">
+      <CardFooter className="flex justify-end border-t px-4 !py-2">
         <Button
           className={
             canAfford ? "bg-teal-600 hover:bg-teal-700" : "bg-gray-300"
