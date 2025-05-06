@@ -4,30 +4,35 @@
 
 <h2 class="text-center text-xl font-semibold mt-6">Traveller Connect Screenshots 🖼️</h2>
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; justify-items: center; margin-top: 16px;">
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">HomePage</h3>
-    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" width="230" class="rounded-lg shadow-md"/>
+<div class="grid grid-cols-2 gap-6 mt-6 mx-auto max-w-4xl">
+  <div class="text-center">
+    <h3 class="text-lg font-medium">HomePage</h3>
+    <img src="./public/Welcom.png" alt="Traveller Connect HomePage" class="rounded-lg shadow-md" />
   </div>
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">Travel Feed</h3>
-    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" width="230" class="rounded-lg shadow-md"/>
+  
+  <div class="text-center">
+    <h3 class="text-lg font-medium">Travel Feed</h3>
+    <img src="./public/travel-feed.png" alt="Traveller Connect FeedPage" class="rounded-lg shadow-md" />
   </div>
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">Blog Detail</h3>
-    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" width="230" class="rounded-lg shadow-md"/>
+  
+  <div class="text-center">
+    <h3 class="text-lg font-medium">Blog Detail</h3>
+    <img src="./public/blog-detail.png" alt="Traveller Connect Blog" class="rounded-lg shadow-md" />
   </div>
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">Issue Page</h3>
-    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" width="230" class="rounded-lg shadow-md"/>
+  
+  <div class="text-center">
+    <h3 class="text-lg font-medium">Issue Page</h3>
+    <img src="./public/issue-detail.png" alt="Traveller Connect IssuePage" class="rounded-lg shadow-md" />
   </div>
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">Issue Form</h3>
-    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" width="230" class="rounded-lg shadow-md"/>
+  
+  <div class="text-center">
+    <h3 class="text-lg font-medium">Issue Form</h3>
+    <img src="./public/issue-form.png" alt="Traveller Connect IssueForm" class="rounded-lg shadow-md" />
   </div>
-  <div class="image-card">
-    <h3 class="text-center text-lg font-medium">Plan Page</h3>
-    <img src="./public/plan.png" alt="Traveller Connect PlanPage" width="230" class="rounded-lg shadow-md"/>
+  
+  <div class="text-center">
+    <h3 class="text-lg font-medium">Plan Page</h3>
+    <img src="./public/plan.png" alt="Traveller Connect PlanPage" class="rounded-lg shadow-md" />
   </div>
 </div>
 
